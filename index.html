@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#eef8ff" />
+  <title>Dr. Randy David Pérez Pupo — Médico pediatra em Carapicuíba</title>
+  <meta name="description" content="Site profissional do Dr. Randy David Pérez Pupo, médico pediatra em Carapicuíba. Informações de contato, biografia, especialidades, teleconsulta e agendamento particular em uma experiência clara e acolhedora.">
+  <meta property="og:title" content="Dr. Randy David Pérez Pupo — Médico pediatra em Carapicuíba" />
+  <meta property="og:description" content="Uma página mais elegante e objetiva para apresentar o pediatra, facilitar o contato e orientar pacientes e famílias." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://production-online-scheduling.s3.amazonaws.com/media/profile/15670/avatar/WhatsApp_Image_2024-06-24_at_15.13.18.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #eef8ff;
+      --bg-2: #f7fbff;
+      --card: rgba(255,255,255,.78);
+      --text: #183042;
+      --muted: #577084;
+      --line: rgba(24,48,66,.12);
+      --accent: #2f7fd1;
+      --accent-2: #5cc3d8;
+      --accent-3: #8dd3a7;
+      --shadow: 0 24px 62px rgba(24, 48, 66, .10);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 18px;
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(92,195,216,.18), transparent 34%),
+        radial-gradient(circle at top right, rgba(141,211,167,.18), transparent 28%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 52%, #fff 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(47,127,209,.045) 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: .55;
+      z-index: 0;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display:block; max-width:100%; }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      width: min(var(--max), calc(100% - 30px));
+      margin: 0 auto;
+      padding: 24px 0 44px;
+    }
+
+    .topbar {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      margin-bottom:22px;
+      padding:12px 16px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background: rgba(255,255,255,.56);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 8px 30px rgba(24,48,66,.05);
+    }
+    .brand { display:flex; align-items:center; gap:12px; min-width:0; }
+    .brand__mark {
+      width:38px; height:38px; border-radius:14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      position: relative; flex:0 0 auto;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 12px 26px rgba(47,127,209,.22);
+    }
+    .brand__mark::after {
+      content:""; position:absolute; inset:9px;
+      border: 1.5px solid rgba(255,255,255,.94);
+      border-radius: 10px 10px 10px 4px; transform: rotate(12deg);
+    }
+    .brand__text strong { display:block; font-size:.98rem; letter-spacing:-.02em; }
+    .brand__text span { display:block; color:var(--muted); font-size:.88rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .nav { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; }
+    .nav a { font-size:.9rem; color:var(--muted); padding:10px 12px; border-radius:999px; transition:.2s ease; }
+    .nav a:hover { background: rgba(47,127,209,.08); color: var(--text); }
+
+    .hero {
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:24px;
+      align-items:stretch;
+      margin-top:14px;
+    }
+    .hero__main, .hero__side, .panel, .card {
+      border:1px solid var(--line);
+      background: var(--card);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+    .hero__main {
+      border-radius: var(--radius-xl);
+      padding: clamp(24px, 4vw, 42px);
+      overflow:hidden;
+      position:relative;
+      isolation:isolate;
+    }
+    .hero__main::after {
+      content:"";
+      position:absolute;
+      inset:auto -110px -120px auto;
+      width: 360px; height:360px; border-radius:50%;
+      background: radial-gradient(circle, rgba(92,195,216,.20), rgba(92,195,216,0) 68%);
+      z-index:-1;
+    }
+    .eyebrow {
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 13px; border-radius:999px;
+      background: rgba(47,127,209,.09); color: var(--accent);
+      font-size:.84rem; font-weight:800; letter-spacing:.05em; text-transform:uppercase;
+      margin-bottom:16px;
+    }
+    .eyebrow::before { content:""; width:8px; height:8px; border-radius:50%; background: linear-gradient(135deg, var(--accent), var(--accent-3)); box-shadow: 0 0 0 4px rgba(47,127,209,.10); }
+    .display {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(3rem, 8vw, 5.8rem);
+      line-height:.92;
+      margin:0 0 16px;
+      letter-spacing:-.03em;
+      max-width: 9.2ch;
+    }
+    .lead { margin:0 0 22px; max-width: 64ch; line-height:1.76; font-size:1.05rem; color:var(--muted); }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:18px; }
+    .btn {
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      min-height:48px; padding:0 18px; border-radius:999px;
+      border:1px solid transparent; font-weight:800; transition:.18s ease; will-change:transform;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn--primary { background: linear-gradient(135deg, var(--accent), #215b9a 74%); color:#fff; box-shadow:0 16px 28px rgba(47,127,209,.22); }
+    .btn--ghost { background: rgba(255,255,255,.72); color: var(--text); border-color: rgba(47,127,209,.14); }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; color:var(--muted); font-size:.93rem; }
+    .meta span { display:inline-flex; align-items:center; gap:8px; padding:9px 12px; border-radius:999px; background: rgba(255,255,255,.72); border:1px solid rgba(47,127,209,.12); }
+
+    .hero__side { border-radius: var(--radius-xl); padding:18px; display:flex; flex-direction:column; gap:16px; }
+    .profile {
+      background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.72));
+      border:1px solid rgba(47,127,209,.12); border-radius:26px; padding:18px;
+    }
+    .profile__photo {
+      width:100%; aspect-ratio: 1 / 1.03; border-radius:22px; overflow:hidden;
+      background: linear-gradient(135deg, rgba(47,127,209,.16), rgba(141,211,167,.20));
+      margin-bottom:14px; position:relative;
+    }
+    .profile__photo img { width:100%; height:100%; object-fit:cover; }
+    .profile__photo::after { content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(0,0,0,0) 52%, rgba(18,32,45,.18) 100%); }
+    .profile h2 { font-size:1.34rem; margin:0 0 6px; }
+    .profile p { margin:0; color:var(--muted); line-height:1.62; }
+
+    .facts { display:grid; gap:12px; }
+    .fact {
+      padding:15px 16px; border-radius:18px; background: rgba(255,255,255,.72);
+      border:1px solid rgba(47,127,209,.12);
+    }
+    .fact__label { display:block; font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); font-weight:800; margin-bottom:4px; }
+    .fact__value { display:block; line-height:1.55; }
+
+    .section { margin-top:26px; }
+    .section__head { display:flex; justify-content:space-between; align-items:flex-end; gap:12px; margin-bottom:14px; }
+    .section__head h2 { font-family:"Fraunces", Georgia, serif; font-size: clamp(2rem, 4vw, 3rem); line-height:.96; margin:0; }
+    .section__head p { margin:0; max-width:56ch; line-height:1.6; color:var(--muted); text-align:right; }
+
+    .grid { display:grid; gap:16px; }
+    .grid--facts { grid-template-columns: repeat(4, minmax(0,1fr)); }
+    .grid--services { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .grid--reviews { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .grid--info { grid-template-columns: 1fr 1fr; }
+
+    .card, .panel { border-radius: var(--radius-lg); overflow:hidden; }
+    .stat { padding:20px; min-height:160px; position:relative; background: rgba(255,255,255,.76); }
+    .stat::before { content:""; position:absolute; inset:0 auto auto 0; width:100%; height:4px; background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3)); }
+    .stat strong { display:block; font-size:2rem; letter-spacing:-.04em; margin-top:18px; }
+    .stat span { display:block; color:var(--muted); line-height:1.6; margin-top:8px; }
+
+    .service { padding:22px; min-height:220px; display:flex; flex-direction:column; gap:14px; background: rgba(255,255,255,.76); position:relative; }
+    .service::before { content:""; position:absolute; top:0; left:0; right:0; height:4px; background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3)); }
+    .tag { width:fit-content; font-size:.78rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); background: rgba(47,127,209,.09); border-radius:999px; padding:8px 11px; }
+    .service h3, .review h3, .box h3 { margin:0; font-size:1.08rem; letter-spacing:-.02em; }
+    .service p, .review p, .box p { margin:0; color:var(--muted); line-height:1.7; }
+
+    .review { padding:20px; display:flex; flex-direction:column; gap:12px; background: rgba(255,255,255,.76); }
+    .stars { color:#f0b84d; letter-spacing:1px; font-size:1.05rem; }
+    .review small { color: var(--muted); }
+    .quote { padding:16px; border-radius:18px; background: rgba(47,127,209,.06); border:1px solid rgba(47,127,209,.10); line-height:1.7; }
+
+    .panel { padding:22px; background: rgba(255,255,255,.76); }
+    .info { display:grid; grid-template-columns: 1.05fr .95fr; gap:16px; }
+    .box {
+      padding:20px; border-radius:22px; background: rgba(255,255,255,.7); border:1px solid rgba(47,127,209,.12);
+      box-shadow: 0 10px 24px rgba(24,48,66,.04);
+    }
+    .list { margin:14px 0 0; padding:0; list-style:none; display:grid; gap:12px; }
+    .list li { display:flex; gap:12px; align-items:flex-start; padding:13px 14px; border:1px solid rgba(47,127,209,.12); border-radius:18px; background: rgba(255,255,255,.7); }
+    .bullet { width:12px; height:12px; border-radius:50%; margin-top:6px; flex:0 0 auto; background: linear-gradient(135deg, var(--accent), var(--accent-3)); box-shadow: 0 0 0 5px rgba(47,127,209,.08); }
+    .list strong { display:block; margin-bottom:2px; }
+    .list span { color:var(--muted); line-height:1.6; }
+    .pill-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+    .pill { display:inline-flex; align-items:center; gap:8px; padding:9px 12px; border:1px solid rgba(47,127,209,.12); border-radius:999px; background: rgba(255,255,255,.7); font-size:.92rem; }
+
+    .cta-band {
+      margin-top:24px; padding:26px; border-radius:28px;
+      background: linear-gradient(135deg, #255f9d, #2f7fd1 42%, #7bc9d8 100%); color:#fff;
+      position:relative; overflow:hidden; box-shadow: 0 20px 60px rgba(33,91,154,.22);
+    }
+    .cta-band::before, .cta-band::after { content:""; position:absolute; border-radius:50%; background: rgba(255,255,255,.08); filter: blur(12px); }
+    .cta-band::before { width:240px; height:240px; right:-70px; top:-70px; }
+    .cta-band::after { width:180px; height:180px; left:-60px; bottom:-70px; }
+    .cta-band__inner { position:relative; z-index:1; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; }
+    .cta-band h2 { font-family:"Fraunces", Georgia, serif; font-size: clamp(2rem, 4vw, 3.2rem); line-height:.95; margin:0 0 10px; }
+    .cta-band p { margin:0; max-width:68ch; line-height:1.7; color: rgba(255,255,255,.9); }
+
+    .footer { padding:26px 6px 8px; text-align:center; color:var(--muted); font-size:.92rem; line-height:1.7; }
+    .divider { height:1px; background: linear-gradient(90deg, transparent, rgba(47,127,209,.18), transparent); margin:20px 0; }
+
+    @media (max-width: 1040px) {
+      .hero, .info, .grid--facts, .grid--services, .grid--reviews { grid-template-columns: 1fr 1fr; }
+      .grid--services, .grid--reviews { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .grid--facts { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 760px) {
+      .page { width:min(var(--max), calc(100% - 18px)); padding-top:14px; }
+      .topbar { position:static; border-radius:24px; padding:14px; flex-direction:column; align-items:stretch; }
+      .nav { justify-content:flex-start; }
+      .hero, .info, .grid--facts, .grid--services, .grid--reviews { grid-template-columns:1fr; }
+      .hero__main, .hero__side, .panel, .cta-band { border-radius:24px; }
+      .display { max-width:none; font-size: clamp(2.5rem, 16vw, 4.2rem); }
+      .section__head { flex-direction:column; align-items:flex-start; }
+      .section__head p { text-align:left; }
+      .cta-band__inner { align-items:flex-start; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior:auto; }
+      *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar" aria-label="Navegação principal">
+      <div class="brand">
+        <div class="brand__mark" aria-hidden="true"></div>
+        <div class="brand__text">
+          <strong>Dr. Randy Pérez</strong>
+          <span>Médico pediatra • Carapicuíba</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="topo">
+      <article class="hero__main">
+        <div class="eyebrow">Pediatria • teleconsulta • atendimento particular</div>
+        <h1 class="display">Dr. Randy David Pérez Pupo</h1>
+        <p class="lead">
+          Médico pediatra em Carapicuíba, com atuação pública em urgência/emergência pediátrica e neonatal,
+          endocrinologia pediátrica, obesidade infantil e medicina de família. A página organiza sua presença digital
+          de forma mais clara, acolhedora e profissional para famílias e pacientes.
+        </p>
+        <div class="actions">
+          <a class="btn btn--primary" href="tel:(11) 9587-7794">Ligar para (11) 9587-7794</a>
+          <a class="btn btn--ghost" href="tel:(11) 5043-1718">Ligar para (11) 5043-1718</a>
+          <a class="btn btn--ghost" href="https://instagram.com/dr.randy.perez" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        <div class="meta">
+          <span>Atende teleconsulta</span>
+          <span>Particular</span>
+          <span>Carapicuíba</span>
+          <span>Sem agenda online disponível</span>
+        </div>
+      </article>
+
+      <aside class="hero__side">
+        <div class="profile">
+          <div class="profile__photo">
+            <img src="https://production-online-scheduling.s3.amazonaws.com/media/profile/15670/avatar/WhatsApp_Image_2024-06-24_at_15.13.18.jpg" alt="Dr. Randy David Pérez Pupo" />
+          </div>
+          <h2>Médico pediatra</h2>
+          <p>
+            Atendimento particular com foco em crianças e famílias, combinando clareza, confiança e orientações objetivas.
+          </p>
+        </div>
+        <div class="facts">
+          <div class="fact">
+            <span class="fact__label">Consultório</span>
+            <span class="fact__value">Rua Antônio Zamela, 43, Carapicuíba</span>
+          </div>
+          <div class="fact">
+            <span class="fact__label">Teleconsulta</span>
+            <span class="fact__value">Sim, realiza atendimentos via teleconsulta.</span>
+          </div>
+          <div class="fact">
+            <span class="fact__label">Agenda online</span>
+            <span class="fact__value">Não possui agenda online disponível no momento.</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="section__head">
+        <h2>O que o paciente encontra aqui</h2>
+        <p>Uma leitura limpa do perfil, com os fatos públicos organizados em uma estrutura mais elegante e fácil de converter em contato.</p>
+      </div>
+      <div class="grid grid--facts">
+        <article class="card stat"><strong>Urgência</strong><span>Especialização em urgência/emergência pediátrica e neonatal.</span></article>
+        <article class="card stat"><strong>Endócrino</strong><span>Atuação também em endocrinologia pediátrica.</span></article>
+        <article class="card stat"><strong>Obesidade</strong><span>Foco em obesidade infantil e cuidado contínuo.</span></article>
+        <article class="card stat"><strong>Família</strong><span>Medicina de família para acompanhamento mais amplo.</span></article>
+      </div>
+
+      <div class="panel" style="margin-top:16px;">
+        <div class="info">
+          <div class="box">
+            <h3>Biografia pública</h3>
+            <p>“Olá! Sou o Dr. Randy Pérez, um apaixonado médico pediatra com especialização em urgência/emergência pediátrica e neonatal, endocrinologia pediátrica, obesidade infantil e medicina de família. Dedico minha carreira a cuidar das crianças, ajudando-as a crescerem saudáveis e felizes.”</p>
+            <div class="divider"></div>
+            <p>O site transforma essa mensagem em uma experiência mais forte, sem perder a proximidade do atendimento.</p>
+          </div>
+          <div class="box">
+            <h3>Resumo de posicionamento</h3>
+            <p>Particular, teleconsulta disponível, contato direto por telefone e perfil oficial no Instagram.</p>
+            <div class="pill-row">
+              <a class="pill" href="https://instagram.com/dr.randy.perez" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a class="pill" href="tel:(11) 9587-7794">(11) 9587-7794</a>
+              <a class="pill" href="tel:(11) 5043-1718">(11) 5043-1718</a>
+            </div>
+            <div class="divider"></div>
+            <p>Ideal para receber pacientes que chegam tanto por busca quanto por indicação, e precisam entender rápido onde e como falar com a clínica.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicos">
+      <div class="section__head">
+        <h2>Serviços e especialidades</h2>
+        <p>Organizei as áreas em blocos objetivos, pensando em acolhimento, entendimento rápido e maior confiança.</p>
+      </div>
+      <div class="grid grid--services">
+        <article class="card service">
+          <span class="tag">Especialidade</span>
+          <h3>Médico pediatra</h3>
+          <p>Base principal do perfil, com atendimento voltado ao cuidado integral da criança.</p>
+          <a class="btn btn--primary" href="tel:(11) 9587-7794">Falar agora</a>
+        </article>
+        <article class="card service">
+          <span class="tag">Atendimento</span>
+          <h3>Teleconsulta</h3>
+          <p>O perfil informa que há atendimento via teleconsulta e horários para agendamento.</p>
+          <a class="btn btn--ghost" href="#faq">Ver perguntas</a>
+        </article>
+        <article class="card service">
+          <span class="tag">Modelo</span>
+          <h3>Particular</h3>
+          <p>Convênio informado como particular, com direcionamento para contato direto com a clínica.</p>
+          <a class="btn btn--ghost" href="#contato">Entrar em contato</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="section__head">
+        <h2>Perguntas respondidas</h2>
+        <p>Usei as perguntas públicas do perfil para reduzir dúvidas e encurtar o caminho até o agendamento.</p>
+      </div>
+      <div class="grid grid--reviews">
+        <article class="card review">
+          <h3>Onde fica o consultório?</h3>
+          <div class="quote">Meu consultório fica na <strong>Rua Antônio Zamela, 43, Carapicuíba</strong>.</div>
+        </article>
+        <article class="card review">
+          <h3>Atende teleconsulta?</h3>
+          <div class="quote">Sim, realizo atendimentos via teleconsulta e tenho horários disponíveis para agendamento.</div>
+        </article>
+        <article class="card review">
+          <h3>Agenda online / convênios</h3>
+          <div class="quote">A agenda online ainda não está disponível e os convênios listados aparecem como <strong>particular</strong>.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="section__head">
+        <h2>Contato direto</h2>
+        <p>O principal objetivo dessa página é facilitar o contato com a clínica e passar confiança logo no primeiro clique.</p>
+      </div>
+      <div class="panel">
+        <div class="info">
+          <div class="box">
+            <h3>Canais principais</h3>
+            <p>Telefone, Instagram e a própria ficha do perfil são os caminhos mais claros para quem quer agendar ou pedir informações.</p>
+            <div class="pill-row">
+              <a class="pill" href="tel:(11) 9587-7794">Ligar para 9587-7794</a>
+              <a class="pill" href="tel:(11) 5043-1718">Ligar para 5043-1718</a>
+              <a class="pill" href="https://instagram.com/dr.randy.perez" target="_blank" rel="noopener noreferrer">Abrir Instagram</a>
+            </div>
+          </div>
+          <div class="box">
+            <h3>Mensagem de confiança</h3>
+            <p>Uma presença digital mais sólida ajuda a explicar a especialidade, destacar a teleconsulta e reduzir dúvidas antes da primeira conversa.</p>
+            <div class="divider"></div>
+            <a class="btn btn--primary" href="tel:(11) 9587-7794">Agendar por telefone</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-label="Chamada final">
+      <div class="cta-band__inner">
+        <div>
+          <h2>Mais clareza para as famílias. Mais confiança para o paciente.</h2>
+          <p>Este site foi desenhado para apresentar o Dr. Randy com mais profissionalismo, sem perder a proximidade essencial da pediatria.</p>
+        </div>
+        <div class="actions" style="margin:0;">
+          <a class="btn btn--primary" href="tel:(11) 9587-7794" style="background:#fff;color:var(--accent);">Ligar agora</a>
+          <a class="btn btn--ghost" href="https://instagram.com/dr.randy.perez" target="_blank" rel="noopener noreferrer" style="background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.24);">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>Dr. Randy David Pérez Pupo — Médico pediatra em Carapicuíba</div>
+      <div>Conteúdo organizado a partir das informações públicas do perfil Agendar Consulta.</div>
+    </footer>
+  </main>
+</body>
+</html>
